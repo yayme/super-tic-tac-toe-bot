@@ -27,6 +27,6 @@ Super Tic-Tac-Toe is an innovative twist on the classic game, featuring a 9x9 bo
 ## Getting Started
 
 To run the Super Tic-Tac-Toe game against a bot:
-[Against a bot](https://editor.p5js.org/Adnan_yayme/full/0TsZJ5GvS)
+[Against a bot](https://editor.p5js.org/Adnan_yayme/full/0TsZJ5GvS)  
 [Two player](https://editor.p5js.org/Adnan_yayme/full/FD8l8wZoe)
 
