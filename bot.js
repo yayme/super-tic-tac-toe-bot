@@ -31,8 +31,8 @@ function best_move() {
   }
   
   let scores = {
-    X: 100,
-    O: -100,
+    X: 10,
+    O: -10,
     tie: 0
   };
   
@@ -43,7 +43,7 @@ function best_move() {
     if (result !== null) {
       return scores[result];
     }
-    if(depth==2){
+    if(depth==1){
   return cnt;
     }
   
