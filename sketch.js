@@ -16,11 +16,11 @@ function setup() {
   h=height/9;
   bigw=width/3;
   bigh=height/3;
-   // best_move();
+  // best_move();
 }
 
 function mousePressed() {
- if (current_player == human  ) {
+ if (current_player == human ) {
 
     let i = floor(mouseX / w);
     let j = floor(mouseY / h);
@@ -29,15 +29,10 @@ function mousePressed() {
       board[i][j] = current_player;
       
       small_checkwinner(floor(i/3),floor(j/3));
-      if(current_player==human)
-        {
+ 
           current_player=bot;
-        }
-      else
-        {
-          current_player=human;
-        }
-       best_move();
+      
+      best_move();
     }
  }
 }
@@ -117,7 +112,10 @@ function small_checkwinner(a,b) {
   if (equals(board[2+3*a][0+3*b], board[1+3*a][1+3*b], board[0+3*a][2+3*b])) {
     winner = board[2+3*a][0+3*b];
   }
-
+if (winner==bot)
+  {cnt--;}
+  if(winner==human)
+    {cnt++;}
   let open_spots = 0;
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
@@ -131,11 +129,9 @@ function small_checkwinner(a,b) {
     bigboard[a][b]='=';
   } else if(winner==human) {
     bigboard[a][b]=human;
-    cnt++;
   }
   else if(winner==bot){
     bigboard[a][b]=bot;
-    cnt--;
   }
   else
     {
